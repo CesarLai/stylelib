@@ -1,0 +1,38 @@
+{
+  "name": "@cesarlai/style-toolkit",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@github.com:CesarLai/style-toolkit.git",
+  "author": "Cesar Lai <git@cesarlai.com>",
+  "description": "A style lib that include useful mixins, help you get complex display easily.",
+  "license": "MIT",
+  "scripts": {},
+  "files": [
+    "lib",
+    "themes",
+    "antd",
+    "fonts",
+    "package.json",
+    "README.md"
+  ],
+  "devDependencies": {
+    "commitizen": "4.2.3",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "6.0.0",
+    "less": "^4.1.3",
+    "lint-staged": "11.2.6",
+    "stylelint": "13.12.0",
+    "stylelint-config-prettier": "8.0.2",
+    "stylelint-config-standard": "21.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "2.3.0",
+    "stylelint-order": "4.1.0"
+  },
+  "lint-staged": {
+    "*.{css,less}": "stylelint --syntax less"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

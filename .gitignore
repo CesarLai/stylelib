@@ -1,0 +1,21 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# build
+/dist
+
+# dependencies
+/node_modules
+
+# misc
+.DS_Store
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# visual studio code
+.vscode
+
+# eslint
+.eslintcache
