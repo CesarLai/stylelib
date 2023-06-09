@@ -6,7 +6,9 @@
   "author": "Cesar Lai <git@cesarlai.com>",
   "description": "A style lib that include useful mixins, help you get complex display easily.",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "mv src/* . && rm -rf src"
+  },
   "files": [
     "less",
     "LICENSE",
