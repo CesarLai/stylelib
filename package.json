@@ -8,10 +8,8 @@
   "license": "MIT",
   "scripts": {},
   "files": [
-    "lib",
-    "themes",
-    "antd",
-    "fonts",
+    "less",
+    "LICENSE",
     "package.json",
     "README.md"
   ],
