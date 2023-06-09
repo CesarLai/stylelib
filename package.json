@@ -6,8 +6,8 @@
   "author": "Cesar Lai <git@cesarlai.com>",
   "description": "A style lib that include useful mixins, help you get complex display easily.",
   "license": "MIT",
-  "scripts": {
-    "build": "mv src/* . && rm -rf src"
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "files": [
     "less",
@@ -15,6 +15,9 @@
     "package.json",
     "README.md"
   ],
+  "scripts": {
+    "build": "mv src/* . && rm -rf src"
+  },
   "devDependencies": {
     "commitizen": "4.2.3",
     "cz-conventional-changelog": "3.3.0",
