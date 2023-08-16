@@ -1,0 +1,24 @@
+/**
+ * scroll common mixin
+ */
+
+/**
+ * mixin to hide scrollbar
+ *
+ * ```scss 
+ * .container {
+ *   @include scrollbar-hidden;
+ * }
+ * ```
+ */
+@mixin scrollbar-hidden {
+  // Firefox
+  scrollbar-width: none;
+  // ms
+  -ms-overflow-style: none;
+
+  // Chrome & Safari
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

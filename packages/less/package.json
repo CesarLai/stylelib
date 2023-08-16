@@ -1,0 +1,33 @@
+{
+  "name": "@cesarlai/stylelib-less",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:CesarLai/stylelib.git",
+  "author": "Cesar Lai <git@cesarlai.com>",
+  "description": "A less lib that provide useful utils (eg: mixins, function), help you get complex display easily.",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "files": [
+    "mixins",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build:dev": "mv src/* dist",
+    "build": "mv src/* . && rm -rf src",
+    "publish": "npm publish",
+    "lint": "stylelint src --color --fix --syntax less"
+  },
+  "lint-staged": {
+    "*.{less}": "stylelint --syntax less"
+  },
+  "config": {
+    "commitizen": {
+      "path": "../../node_modules/cz-conventional-changelog"
+    }
+  }
+}

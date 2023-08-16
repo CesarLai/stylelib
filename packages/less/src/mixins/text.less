@@ -4,6 +4,13 @@
 
 /** 
  * single line ellipsis mixin 
+ *
+ * ```less
+ * .section {
+ *   // show single line maximum
+ *   .text-ellipsis-single-row();
+ * }
+ * ```
  */
 .text-ellipsis-single-row {
   overflow: hidden;
@@ -25,10 +32,10 @@
  * }
  * ```
  */
-.text-ellipsis-multi-rows(@n) {
+.text-ellipsis-multi-rows(@max-row) {
   display: -webkit-box;
   text-overflow: ellipsis;
   overflow: hidden;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: @n;
+  -webkit-line-clamp: @max-row;
 }

@@ -1,0 +1,41 @@
+/**
+ * text common mixin
+ */
+
+/** 
+ * single line ellipsis mixin
+ *
+ * ```scss
+ * .section {
+ *   // show single line maximum
+ *   @include text-ellipsis-single-row;
+ * }
+ * ```
+ */
+@mixin text-ellipsis-single-row {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/**
+ * multiple lines ellipsis mixin
+ *
+ * ```scss
+ * .section {
+ *   // show three lines maximum
+ *   @include text-ellipsis-multi-rows(3);
+ *   // show four lines maximum
+ *   @include text-ellipsis-multi-rows(4);
+ *   // show five lines maximum
+ *   @include text-ellipsis-multi-rows(5);
+ * }
+ * ```
+ */
+@mixin text-ellipsis-multi-rows($max-row) {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $max-row;
+}
