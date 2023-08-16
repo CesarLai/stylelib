@@ -11,7 +11,7 @@
     "build:scss": "pnpm --filter @cesarlai/stylelib-scss build",
     "build:dev": "pnpm -r build:dev",
     "build": "pnpm -r build",
-    "publish": "pnpm -r publish",
+    "publish": "pnpm -r run publish",
     "lint": "pnpm -r lint",
     "commit": "git-cz"
   },
