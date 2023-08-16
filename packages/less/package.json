@@ -19,7 +19,7 @@
   "scripts": {
     "prebuild:dev": "rimraf dist",
     "build:dev": "pnpm prebuild:dev && mkdir dist && cp -r src/* ../../LICENSE package.json dist/",
-    "build": "cp -r src/* ../../LICENSE package.json ./",
+    "build": "cp -r src/* ../../LICENSE ./",
     "publish": "npm publish",
     "lint": "stylelint src --color --fix --syntax less"
   },
