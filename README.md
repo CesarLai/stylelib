@@ -1,4 +1,4 @@
-# Style Lib
+# stylelib
 
 > A less/sass lib that provide useful utils (eg: mixins, function), help you get complex display easily.
 
