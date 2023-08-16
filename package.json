@@ -1,38 +1,32 @@
 {
-  "name": "@cesarlai/style-toolkit",
+  "name": "@cesarlai/stylelib",
   "version": "0.1.0",
   "main": "index.js",
-  "repository": "git@github.com:CesarLai/style-toolkit.git",
+  "repository": "git@github.com:CesarLai/stylelib.git",
   "author": "Cesar Lai <git@cesarlai.com>",
-  "description": "A style lib that include useful mixins, help you get complex display easily.",
+  "description": "A less/sass lib that provide useful utils (eg: mixins, function), help you get complex display easily.",
   "license": "MIT",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
-  },
-  "files": [
-    "less",
-    "LICENSE",
-    "package.json",
-    "README.md"
-  ],
   "scripts": {
-    "build": "mv src/* . && rm -rf src"
+    "build:less": "pnpm --filter @cesarlai/stylelib-less build",
+    "build:scss": "pnpm --filter @cesarlai/stylelib-scss build",
+    "build:dev": "pnpm -r build:dev",
+    "build": "pnpm -r build",
+    "publish": "pnpm -r publish",
+    "lint": "pnpm -r lint",
+    "commit": "git-cz"
   },
   "devDependencies": {
     "commitizen": "4.2.3",
     "cz-conventional-changelog": "3.3.0",
+    "git-cz": "^4.9.0",
     "husky": "6.0.0",
-    "less": "^4.1.3",
     "lint-staged": "11.2.6",
+    "rimraf": "4.0.1",
     "stylelint": "13.12.0",
     "stylelint-config-prettier": "8.0.2",
     "stylelint-config-standard": "21.0.0",
     "stylelint-declaration-block-no-ignored-properties": "2.3.0",
     "stylelint-order": "4.1.0"
-  },
-  "lint-staged": {
-    "*.{css,less}": "stylelint --syntax less"
   },
   "config": {
     "commitizen": {

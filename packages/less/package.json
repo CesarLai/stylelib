@@ -17,8 +17,9 @@
     "README.md"
   ],
   "scripts": {
-    "build:dev": "mv src/* dist",
-    "build": "mv src/* . && rm -rf src",
+    "prebuild:dev": "rimraf dist",
+    "build:dev": "pnpm prebuild:dev && mkdir dist && cp -r src/* ../../LICENSE package.json dist/",
+    "build": "cp -r src/* ../../LICENSE package.json ./",
     "publish": "npm publish",
     "lint": "stylelint src --color --fix --syntax less"
   },

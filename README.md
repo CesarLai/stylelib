@@ -1,24 +1,27 @@
-# @cesarlai/style-toolkit
+# Cesar Lai Style Lib
 
-> A style lib that include useful mixins, help you get complex display easily.
+> A less/sass lib that provide useful utils (eg: mixins, function), help you get complex display easily.
 
 ## Getting Started
 
 installation
 
 ```sh
-npm install @cesarlai/style-toolkit
+# less lib
+npm install @cesarlai/stylelib-less
+# scss lib
+npm install @cesarlai/stylelib-scss
 ```
 
 using in `.less`
 
 ```less
 // import all mixins
-@import "@cesarlai/style-toolkit/less/mixins";
+@import "@cesarlai/stylelib-less/mixins";
 // import text common mixins
-@import "@cesarlai/style-toolkit/less/mixins/text";
+@import "@cesarlai/stylelib-less/mixins/text";
 // import scroll common mixins
-@import "@cesarlai/style-toolkit/less/mixins/scroll";
+@import "@cesarlai/stylelib-less/mixins/scroll";
 
 .text {
   // show single line maximum
@@ -36,17 +39,43 @@ using in `.less`
 }
 ```
 
+using in `.scss`
+
+```scss
+// import all mixins
+@import "@cesarlai/stylelib-scss/mixins";
+// import text common mixins
+@import "@cesarlai/stylelib-scss/mixins/text";
+// import scroll common mixins
+@import "@cesarlai/stylelib-scss/mixins/scroll";
+
+.text {
+  // show single line maximum
+  @include text-ellipsis-single-row;
+}
+
+.richtext {
+  // show three lines maximum
+  @include text-ellipsis-multi-rows(3);
+}
+
+.container {
+  // mixin to hide scrollbar
+  @include scrollbar-hidden;
+}
+```
+
 ## API Reference
 
 ### Scroll
 
-| API Name         | Description              | Example                |
-| ---------------- | ------------------------ | ---------------------- |
-| scrollbar-hidden | mixin to hide scrollbar. | `.scrollbar-hidden();` |
+| API Name         | Description              |
+| ---------------- | ------------------------ |
+| scrollbar-hidden | mixin to hide scrollbar. |
 
 ### Text
 
-| API Name                 | Description               | Example                         |
-| ------------------------ | ------------------------- | ------------------------------- |
-| text-ellipsis-single-row | show single line maximum. | `.text-ellipsis-single-row();`  |
-| text-ellipsis-multi-rows | show three lines maximum. | `.text-ellipsis-multi-rows(3);` |
+| API Name                 | Description               |
+| ------------------------ | ------------------------- |
+| text-ellipsis-single-row | show single line maximum. |
+| text-ellipsis-multi-rows | show three lines maximum. |
