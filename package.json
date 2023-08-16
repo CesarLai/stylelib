@@ -6,12 +6,13 @@
   "author": "Cesar Lai <git@cesarlai.com>",
   "description": "A less/sass lib that provide useful utils (eg: mixins, function), help you get complex display easily.",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "build:less": "pnpm --filter @cesarlai/stylelib-less build",
     "build:scss": "pnpm --filter @cesarlai/stylelib-scss build",
     "build:dev": "pnpm -r build:dev",
     "build": "pnpm -r build",
-    "publish": "pnpm -r run publish",
+    "publish": "pnpm -r publish --no-git-checks",
     "lint": "pnpm -r lint",
     "commit": "git-cz"
   },

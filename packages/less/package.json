@@ -1,6 +1,6 @@
 {
   "name": "@cesarlai/stylelib-less",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "repository": "git@github.com:CesarLai/stylelib.git",
   "author": "Cesar Lai <git@cesarlai.com>",
@@ -20,7 +20,6 @@
     "prebuild:dev": "rimraf dist",
     "build:dev": "pnpm prebuild:dev && mkdir dist && cp -r src/* ../../LICENSE package.json dist/",
     "build": "cp -r src/* ../../LICENSE ./",
-    "publish": "npm publish --no-git-checks",
     "lint": "stylelint src --color --fix --syntax less"
   },
   "lint-staged": {
